@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Legal Analysis of Uganda's Draft National School Feeding Policy | Valizo Foundation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<style>
+:root{
+  --blue:#082962;
+  --green:#46982f;
+  --gold:#edaa04;
+  --red:#d32f2f;
+  --text:#1f2b3d;
+  --soft:#f7f8fb;
+  --line:#e4e8ef;
+}
+
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:var(--soft);
+  color:var(--text);
+  line-height:1.9;
+}
+
+.articleHero{
+  min-height:72vh;
+  background:
+  linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.72)),
+  url("assets/children19.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  color:white;
+  padding:130px 7% 90px;
+}
+
+.articleHeroInner{
+  max-width:1050px;
+}
+
+.articleTag{
+  display:inline-block;
+  background:var(--red);
+  color:white;
+  padding:9px 18px;
+  border-radius:50px;
+  font-weight:800;
+  margin-bottom:22px;
+  letter-spacing:.3px;
+}
+
+.articleHero h1{
+  font-family:"Playfair Display", serif;
+  font-size:clamp(38px,6vw,76px);
+  line-height:1.05;
+  margin:0 0 22px;
+}
+
+.articleSubtitle{
+  max-width:850px;
+  font-size:20px;
+  opacity:.95;
+  margin:0;
+}
+
+.articleMeta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin:30px 0 35px;
+}
+
+.articleMeta span{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.22);
+  backdrop-filter:blur(10px);
+  padding:10px 16px;
+  border-radius:50px;
+  font-weight:700;
+  font-size:14px;
+}
+
+.articleActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.readBtn,
+.downloadBtn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:16px 30px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:16px;
+  border-radius:60px;
+  transition:.3s;
+}
+
+.readBtn{
+  background:white;
+  color:var(--blue);
+}
+
+.downloadBtn{
+  background:var(--red);
+  color:white;
+  box-shadow:0 15px 35px rgba(211,47,47,.25);
+}
+
+.readBtn:hover,
+.downloadBtn:hover{
+  transform:translateY(-3px);
+}
+
+.downloadBtn:hover{
+  background:#b71c1c;
+}
+
+.articleWrap{
+  max-width:1100px;
+  margin:-70px auto 80px;
+  background:white;
+  padding:60px;
+  border-radius:32px;
+  box-shadow:0 25px 70px rgba(8,41,98,.12);
+}
+
+.articleWrap h2{
+  color:var(--blue);
+  font-size:34px;
+  margin:45px 0 18px;
+  line-height:1.25;
+}
+
+.articleWrap p{
+  font-size:18px;
+  margin-bottom:20px;
+}
+
+.statsGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:20px;
+  margin:35px 0;
+}
+
+.statCard{
+  background:#f8fbff;
+  border-top:5px solid var(--green);
+  border-radius:18px;
+  padding:28px;
+}
+
+.statCard h3{
+  color:var(--green);
+  font-size:40px;
+  margin:0 0 8px;
+}
+
+.statCard p{
+  font-size:15px;
+  margin:0;
+}
+
+.quoteBox{
+  background:#f6f8fb;
+  border-left:6px solid var(--red);
+  padding:30px;
+  border-radius:14px;
+  margin:35px 0;
+}
+
+.quoteBox p{
+  color:var(--blue);
+  font-size:22px;
+  font-weight:800;
+  margin:0;
+}
+
+.foodTable{
+  width:100%;
+  border-collapse:collapse;
+  margin:30px 0;
+  overflow:hidden;
+  border-radius:16px;
+}
+
+.foodTable th{
+  background:var(--blue);
+  color:white;
+  padding:18px;
+  text-align:left;
+}
+
+.foodTable td{
+  padding:18px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+
+.foodTable tr:nth-child(even){
+  background:#f8fbff;
+}
+
+.authorBox{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+  margin-top:45px;
+}
+
+.author{
+  background:#f8fbff;
+  border-radius:18px;
+  padding:25px;
+}
+
+.author h3{
+  color:var(--blue);
+  margin-bottom:8px;
+}
+
+.bottomDownload{
+  background:#f8fbff;
+  border-radius:22px;
+  padding:35px;
+  text-align:center;
+  margin-top:45px;
+}
+
+.bottomDownload h3{
+  color:var(--blue);
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.backBtn{
+  display:inline-block;
+  margin-top:35px;
+  color:var(--green);
+  font-weight:900;
+  text-decoration:none;
+  font-size:18px;
+}
+
+@media(max-width:768px){
+  .articleHero{
+    padding:110px 22px 80px;
+  }
+
+  .articleSubtitle{
+    font-size:17px;
+  }
+
+  .articleMeta span{
+    font-size:13px;
+  }
+
+  .readBtn,
+  .downloadBtn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .articleWrap{
+    margin:-40px 15px 60px;
+    padding:28px 22px;
+  }
+
+  .articleWrap h2{
+    font-size:27px;
+  }
+
+  .articleWrap p{
+    font-size:16px;
+  }
+
+  .foodTable{
+    display:block;
+    overflow-x:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/valizo_logo.png" alt="Valizo Foundation">
+      <span class="brandText">
+        <strong>Valizo</strong>
+        <span>Foundation</span>
+      </span>
+    </a>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+
+      <div class="dropdown">
+        <a href="#">Programs ▾</a>
+        <div class="dropdown-content">
+          <a href="projects.html">Projects</a>
+          <a href="advocacy.html">Advocacy</a>
+          <a href="blogs.html">Blogs</a>
+        </div>
+      </div>
+
+      <a href="donate.html">Donation</a>
+    </div>
+
+    <a class="donateBtn" href="donate.html">Donate Now</a>
+  </nav>
+</header>
+
+<section class="articleHero">
+  <div class="articleHeroInner">
+
+    <span class="articleTag">Issue No. 1 • 2026 Edition</span>
+
+    <h1>A Legal Analysis of Uganda's Draft National School Feeding Policy</h1>
+
+    <p class="articleSubtitle">
+      Examining the role of law and adequate nutrition in the protection of children's welfare and rights.
+    </p>
+
+    <div class="articleMeta">
+      <span><i class="fa-solid fa-user-pen"></i> Luleti David &amp; Amina Rejoice</span>
+      <span><i class="fa-solid fa-calendar"></i> June 2026</span>
+      <span><i class="fa-solid fa-book-open"></i> Policy Analysis</span>
+      <span><i class="fa-regular fa-clock"></i> 18 min read</span>
+    </div>
+
+    <div class="articleActions">
+      <a href="#articleContent" class="readBtn">
+        <i class="fa-solid fa-book-open-reader"></i>
+        Read Article
+      </a>
+
+      <a href="assets/A_Legal_Analysis_of_Ugandas_Draft_National_School_Feeding_Policy.pdf" download class="downloadBtn">
+        <i class="fa-solid fa-file-pdf"></i>
+        Download PDF
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<main class="articleWrap" id="articleContent">
+
+  <div class="statsGrid">
+    <div class="statCard">
+      <h3>24.4%</h3>
+      <p>Children under five suffering from chronic stunting in Uganda.</p>
+    </div>
+
+    <div class="statCard">
+      <h3>13.5M</h3>
+      <p>Total learners recorded in Uganda’s 2025 Baseline Education Census.</p>
+    </div>
+
+    <div class="statCard">
+      <h3>68.9%</h3>
+      <p>Households surviving within a subsistence economy.</p>
+    </div>
+
+    <div class="statCard">
+      <h3>0.38</h3>
+      <p>Uganda’s Human Capital Index under the Fourth National Development Plan.</p>
+    </div>
+  </div>
+
+  <h2>Introduction</h2>
+
+  <p>
+    This inaugural issue by Luleti David and Amina Rejoice examines one of the most critical policy debates currently facing Uganda: the development of a National School Feeding Policy.
+  </p>
+
+  <p>
+    School feeding is not merely a matter of welfare or charity. It represents a fundamental question of constitutional responsibility, human dignity, and the protection of children’s rights and welfare. When children attend school hungry, the rights to education, health, and livelihood become severely compromised.
+  </p>
+
+  <p>
+    The article explores how a Human Rights-Based Approach and adequate nutrition standards can guide Uganda’s National School Feeding Policy. It examines the extent to which the State must assume responsibility for protecting children from hunger during school hours.
+  </p>
+
+  <div class="quoteBox">
+    <p>
+      A child whose stomach is full of pure starch may still remain severely malnourished if the brain is starved of zinc, iron, iodine, and vitamin A.
+    </p>
+  </div>
+
+  <h2>Policy Background</h2>
+
+  <p>
+    Global statistics reveal that approximately 149.2 million children have stunted growth, while 340 million children under five suffer from deficiencies in vitamins and other essential micronutrients.
+  </p>
+
+  <p>
+    Between 2023 and 2026, Uganda embarked on developing a National School Feeding Policy following its commitments to the School Meals Coalition in November 2023. The policy is intended to guide school feeding practices and replace the parent-led school feeding approach under UPE and UPPET guidelines.
+  </p>
+
+  <p>
+    Drafted by the Ministry of Education and Sports in 2023, the policy envisions a healthy and well-nourished school population as a foundation for active and effective learning. However, it has not yet been adopted due to outstanding concerns around implementation mechanisms, stakeholder responsibilities, and sustainability.
+  </p>
+
+  <h2>Problem Statement</h2>
+
+  <p>
+    Uganda made formal commitments when joining the Global School Meals Coalition, including finalising and approving the National School Feeding Policy, creating a dedicated budget line, allocating national funds starting with the 2025/2026 Financial Year, and establishing a National Multi-sectoral School Feeding Coordination Committee.
+  </p>
+
+  <p>
+    The draft policy identifies limited food production as a major hindrance to school feeding implementation. However, the article argues that this challenge cannot be fully justified given Uganda’s fertile soils and favourable agricultural conditions.
+  </p>
+
+  <p>
+    The current parent-led approach risks discriminating against children from low-income households whose parents cannot provide meals. This affects equal access to education and nutrition, while weak accountability, unclear funding commitments, and limited complaint mechanisms undermine transparency and empowerment.
+  </p>
+
+  <h2>Education and Learner Retention</h2>
+
+  <p>
+    According to the 2025 Baseline Education Census Report, Uganda has approximately 13.5 million learners. Of these, 2.3 million are in pre-primary education, 9.1 million in primary schools, 2 million in secondary schools, and more than 74,000 in non-tertiary institutions.
+  </p>
+
+  <p>
+    Learner retention remains a serious concern. Out of 1.7 million learners who enrol in Primary One, only 739,204 complete Primary Seven. At secondary level, only 352,929 complete Senior Four out of 508,769 who begin Senior One.
+  </p>
+
+  <p>
+    The article argues that lack of a properly financed school feeding programme is a major contributor to low learner retention and low productivity.
+  </p>
+
+  <h2>Constitutional Obligations</h2>
+
+  <p>
+    Under Article 257(1)(c) of the Constitution of Uganda, a child is defined as a person below the age of eighteen years. This is reinforced under Section 2 of the Children’s Act. Article 34 provides a framework for the protection and welfare of children, including special protection for orphans and vulnerable children.
+  </p>
+
+  <p>
+    Protecting children from hunger is therefore presented as a fundamental obligation of the State in safeguarding dignity and welfare. The article further connects this obligation to Uganda’s broader socio-economic rights commitments, including access to education, health services, clean water, decent shelter, adequate clothing, and food security.
+  </p>
+
+  <h2>International Legal Obligations</h2>
+
+  <p>
+    The article highlights that children have a right to a standard of living adequate for health and wellbeing under international human rights law. It argues that Uganda’s National School Feeding Policy must ensure access to adequate nutritious food and food security, especially for children affected by poverty, orphanhood, or circumstances beyond their control.
+  </p>
+
+  <p>
+    It further relies on the International Covenant on Economic, Social and Cultural Rights, which recognises the right to adequate food and the fundamental right to freedom from hunger and malnutrition.
+  </p>
+
+  <h2>Judicial Interpretation</h2>
+
+  <p>
+    The welfare principle must guide every matter affecting children. Section 3(1) of the Children’s Act provides that the welfare of a child shall be a paramount consideration in all matters concerning a child.
+  </p>
+
+  <p>
+    The article argues that failure by the Government of Uganda to strengthen and effectively implement the National School Feeding Policy in a manner that guarantees adequate and accessible food for school-going children would constitute a breach of constitutional and legal obligations.
+  </p>
+
+  <h2>The Uganda Malnutrition Paradox</h2>
+
+  <p>
+    Data from the Uganda Demographic and Health Survey 2022 shows that 24.4% of children under five suffer from chronic stunting. The article highlights the Tooro sub-region, a fertile and food-abundant area, as having a high childhood stunting rate of 40.6%.
+  </p>
+
+  <p>
+    This demonstrates that agricultural abundance does not automatically guarantee nutritional security. If communities grow food mainly for sale while feeding children monotonous starch-based diets, chronic stunting can continue despite food availability.
+  </p>
+
+  <h2>Food Safety and Aflatoxins</h2>
+
+  <p>
+    The article warns that school feeding supply chains must observe strict food storage procedures and sanitary regulations to protect children from aflatoxins. Aflatoxins are toxic substances produced by moulds that thrive under poor drying, storage, and post-harvest handling conditions.
+  </p>
+
+  <p>
+    It notes that contaminated food products can damage a child’s intestinal lining, suppress nutrient absorption, weaken immunity, damage the liver, and worsen stunting. The article therefore recommends binding food safety standards, batch testing, and stronger accountability in school feeding supply chains.
+  </p>
+
+  <h2>Recommendations</h2>
+
+  <p>
+    The article recommends that Government should assume primary responsibility for financing and implementing school meals instead of relying mainly on parents and communities. It also recommends integrating school feeding into national education, health, and social protection strategies.
+  </p>
+
+  <p>
+    It further recommends home-grown food products sourced from local farmers, including women farmers and smallholder farmers, to support local economies and promote food security.
+  </p>
+
+  <p>
+    The article also supports mechanised agro-ecology at sub-county level to create sustainable food production hubs capable of supplying nutritious food to schools.
+  </p>
+
+  <h2>Localized Food Blueprint</h2>
+
+  <p>
+    The article argues that Uganda does not have one single dietary identity. A centralised national menu may not work effectively. Instead, the policy should adopt a regionalised Minimum Dietary Diversity Score that matches local foods with the nutritional needs of learners in each region.
+  </p>
+
+  <table class="foodTable">
+    <thead>
+      <tr>
+        <th>Agro-Ecological Zone</th>
+        <th>Dominant Local Carbohydrate</th>
+        <th>Mandatory Nutritional Pairings</th>
+        <th>Targeted Outcome</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Western & Central Regions<br><strong>The Matooke Belt</strong></td>
+        <td>Matooke, cassava, white sweet potatoes</td>
+        <td>Iron-rich biofortified beans, groundnut paste, and amaranth leaves</td>
+        <td>Improves protein intake and helps reduce iron-deficiency anaemia.</td>
+      </tr>
+
+      <tr>
+        <td>Eastern & Northern Regions<br><strong>The Cereal & Grains Belt</strong></td>
+        <td>Finger millet, sorghum, cassava</td>
+        <td>Silverfish powder, cowpeas, or pigeon peas</td>
+        <td>Provides calcium, iron, animal protein, zinc, and omega-3 fatty acids for brain growth.</td>
+      </tr>
+
+      <tr>
+        <td>Karamoja & West Nile<br><strong>Arid / High-Wasting Zones</strong></td>
+        <td>Sorghum, maize, cassava, orange-fleshed sweet potatoes</td>
+        <td>Pasteurised whole cow’s milk, beans, vitamin A orange-fleshed sweet potatoes, and vegetables</td>
+        <td>Combats acute wasting through energy density, calcium, protein, and vitamin A.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Authors</h2>
+
+  <div class="authorBox">
+    <div class="author">
+      <h3>Luleti David</h3>
+      <p>LLB (Hons.), Health Advocate, Human Rights Lawyer and activist.</p>
+    </div>
+
+    <div class="author">
+      <h3>Amina Rejoice</h3>
+      <p>Nutrition education and professional development officer, NADSSU.</p>
+    </div>
+  </div>
+
+  <div class="bottomDownload">
+    <h3>Download the Full Publication</h3>
+    <p>Get the complete PDF version of this policy analysis for offline reading and sharing.</p>
+
+    <a href="assets/A_Legal_Analysis_of_Ugandas_Draft_National_School_Feeding_Policy.pdf" download class="downloadBtn">
+      <i class="fa-solid fa-file-pdf"></i>
+      Download Full PDF
+    </a>
+  </div>
+
+  <a href="blogs.html" class="backBtn">← Back to Blogs</a>
+
+</main>
+
+<footer class="siteFooter">
+  <div class="footerContent">
+    <div class="footerLogo">
+      <img src="assets/valizo_logo.png" alt="Valizo Foundation logo">
+      <span>Valizo Foundation</span>
+    </div>
+
+    <div class="socialLinks">
+      <a href="https://x.com/ValizoFoundati_" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com/valizofoundation" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtube.com/@valizofoundation" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://wa.me/2567017777769" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Valizo Foundation. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

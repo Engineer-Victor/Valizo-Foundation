@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Collaborations | Valizo Foundation</title>
+  <meta name="description" content="Explore Valizo Foundation projects and collaborations supporting vulnerable children, young people and underserved communities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html#home" aria-label="Valizo Foundation home">
+        <img src="assets/valizo_logo.png" alt="Valizo Foundation logo" />
+        <span class="brandText"><strong>Valizo</strong><span>Foundation</span></span>
+      </a>
+     <div class="links">
+        <a href="#home">Home</a>
+        <a href="about.html">About Us</a>
+
+        <div class="dropdown">
+          <a href="#programs">Programs ▾</a>
+          <div class="dropdown-content">
+            <a href="projects.html">Projects</a>
+            <a href="advocacy.html">Advocacy</a>
+            <a href="blogs.html">Blogs</a>
+           
+          </div>
+        </div>
+
+        <a href="donate.html">Donation</a>
+      </div>
+
+      <a class="donateBtn" href="index.html#donation">Donate Now</a>
+      <button class="mobileMenu" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projectsHero">
+      <div class="container projectsHeroInner">
+        <div class="projectsHeroCopy">
+        
+          <h1>Partnerships that turn care into visible impact.</h1>
+          <p class="lead">Valizo Foundation works with partners, community groups and supporters to deliver practical projects that protect children, strengthen families and improve access to education, health and livelihood opportunities.</p>
+          <div class="heroActions">
+            <a class="primary" href="mailto:valizofoundationuganda@gmail.com">Become a Partner</a>
+            <a class="secondary" href="#featured-project">View Featured Project</a>
+          </div>
+        </div>
+        <div class="projectsHeroCard">
+          <span>Featured collaboration</span>
+          <strong>VALIZO X Rotary</strong> 
+          <p>A dedicated space to document partner activities, project outcomes and community impact stories.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured-project">
+      <div class="container">
+        <div class="projectFeature">
+          <div class="projectImage">
+            <img src="assets/projects/valizo-rotary.jpg" alt="Valizo Foundation and Rotary collaboration event" />
+          </div>
+          <div class="projectContent">
+            <div class="label">Featured project</div>
+            <h2>VALIZO X Rotary</h2>
+          <!--  <p class="projectIntro">This project page can showcase Valizo Foundation's collaboration with Rotary, including the purpose of the partnership, activities carried out, communities reached and the impact created.</p>
+            --><div class="projectMeta">
+              <div><strong>Partner</strong><span>Rotary / Rotaract</span></div>
+              <div><strong>Focus</strong><span>Community support and child welfare</span></div>
+              <div><strong>Status</strong><span>Details to be updated</span></div>
+            </div>
+            <p>Here we can Explain more about teh Valizo and Rotary Collaboration .</p>
+            <a class="learn" href="mailto:valizofoundationuganda@gmail.com">Discuss partnership opportunities</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section collaborationProcess">
+      <div class="container">
+        <div class="sectionHead">
+          <div class="label">How partnerships work</div>
+          <h2>Simple, accountable and impact focused.</h2>
+        </div>
+        <div class="processGrid">
+          <article><strong>01</strong><h3>Identify the need</h3><p>Valizo and the partner agree on the children, families or communities to be supported.</p></article>
+          <article><strong>02</strong><h3>Plan the activity</h3><p>The team defines the project goal, budget, timelines, responsibilities and expected outcomes.</p></article>
+          <article><strong>03</strong><h3>Implement together</h3><p>Activities are delivered through joint coordination, community participation and responsible supervision.</p></article>
+          <article><strong>04</strong><h3>Report the impact</h3><p>Photos, stories, numbers and lessons are documented to build trust and transparency.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container ctaInner">
+        <div>
+          <h2>Have a project or partnership idea?</h2>
+          <p>Valizo welcomes partners who want to support vulnerable children, strengthen families and create long term community impact.</p>
+        </div>
+        <a class="donateBtn" href="mailto:valizofoundationuganda@gmail.com">Contact Valizo</a>
+      </div>
+    </section>
+
+ <!-- Donation Popup -->
+<div class="donationModal" id="donationModal">
+  <div class="donationOverlay"></div>
+
+  <div class="donationPopup">
+    <button class="closeDonation" id="closeDonation">&times;</button>
+
+    <div class="donationSlider" id="donationSlider">
+
+      <section class="donationStep">
+        <span class="donateLabel">Step 1 of 3</span>
+        <h2>Donation From</h2>
+        <p>Tell us who is making this donation.</p>
+
+        <label>Name</label>
+        <input type="text" id="donorName" placeholder="Enter your full name">
+
+        <label>Cause</label>
+        <select id="donationCause">
+          <option>Pay School Fees</option>
+          <option>Medical Support</option>
+          <option>Food Support</option>
+          <option>Advocacy Campaigns</option>
+          <option>Greatest Need</option>
+        </select>
+
+        <label>Amount</label>
+        <input type="number" id="donationAmount" placeholder="Enter amount in UGX">
+
+        <button class="modalNext" type="button" id="goToPayment">
+          Continue
+        </button>
+      </section>
+
+      <section class="donationStep">
+        <span class="donateLabel">Step 2 of 3</span>
+        <h2>Select Payment Mode</h2>
+        <p>Choose how you would like to complete your donation.</p>
+
+        <div class="paymentChoiceGrid">
+          <button class="paymentChoice mtn" type="button" data-method="mtn">
+            <span>MTN</span>
+            <small>Mobile Money</small>
+          </button>
+
+          <button class="paymentChoice airtel" type="button" data-method="airtel">
+            <span>Airtel</span>
+            <small>Money</small>
+          </button>
+
+          <button class="paymentChoice visa" type="button" data-method="visa">
+            <span>VISA</span>
+            <small>Card Payment</small>
+          </button>
+        </div>
+
+        <button class="modalBack" type="button" id="backToDetails">
+          Back
+        </button>
+      </section>
+
+      <section class="donationStep">
+        <span class="donateLabel">Step 3 of 3</span>
+        <h2 id="paymentTitle">Payment Details</h2>
+        <p id="paymentDescription">
+          Enter your payment details to continue.
+        </p>
+
+        <div class="selectedPaymentBadge" id="selectedPaymentBadge">
+          MTN Mobile Money
+        </div>
+
+        <div class="mobileMoneyFields" id="mobileMoneyFields">
+          <label id="phoneLabel">MTN Number</label>
+          <input type="tel" id="mobileNumber" placeholder="Example: 256701777769">
+
+          <p class="paymentNote">
+            You will receive a prompt on your phone to enter your PIN.
+          </p>
+        </div>
+
+        <div class="visaFields" id="visaFields">
+          <label>Cardholder Name</label>
+          <input type="text" placeholder="Name on card">
+
+          <label>Card Number</label>
+          <input type="text" placeholder="0000 0000 0000 0000">
+
+          <div class="cardRow">
+            <div>
+              <label>Expiry Date</label>
+              <input type="text" placeholder="MM/YY">
+            </div>
+
+            <div>
+              <label>CVV</label>
+              <input type="password" placeholder="123">
+            </div>
+          </div>
+        </div>
+
+        <div class="stepActions">
+          <button class="modalBack" type="button" id="backToMethods">
+            Back
+          </button>
+
+          <button class="submitDonation" type="button">
+            Complete Donation
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<!-- Donation Popup End -->
+
+
+
+  </main>
+
+ <footer class="siteFooter">
+    <div class="footerContent">
+      <div class="footerLogo">
+        <img src="assets/valizo_logo.png" alt="Valizo Foundation logo">
+        <span>Valizo Foundation</span>
+      </div>
+
+      <div class="socialLinks">
+        <a href="https://x.com/ValizoFoundati_" target="_blank" aria-label="Valizo Foundation on X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://instagram.com/valizofoundation" target="_blank" aria-label="Valizo Foundation on Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@valizofoundation" target="_blank" aria-label="Valizo Foundation on YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://wa.me/2567017777769" target="_blank" aria-label="Valizo Foundation on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Valizo Foundation. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

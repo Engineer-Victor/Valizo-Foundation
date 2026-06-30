@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs | Valizo Foundation</title>
+   <meta name="description" content="Valizo Foundation supports vulnerable children and young people through care, education, health support, advocacy and livelihood opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/blogs.css"/>
+</head>
+
+<body>
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/valizo_logo.png" alt="Valizo Foundation">
+      <span class="brandText">
+        <strong>Valizo</strong>
+        <span>Foundation</span>
+      </span>
+    </a>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+
+      <div class="dropdown">
+        <a href="#">Programs ▾</a>
+        <div class="dropdown-content">
+          <a href="projects.html">Projects</a>
+          <a href="advocacy.html">Advocacy</a>
+          <a href="blogs.html">Blogs</a>
+        </div>
+      </div>
+
+      <a href="donate.html">Donation</a>
+    </div>
+
+    <a class="donateBtn" href="donate.html">Donate Now</a>
+  </nav>
+</header>
+
+<section class="blogHero">
+  <div class="blogHeroOverlay"></div>
+
+  <div class="container blogHeroContent">
+    <span class="blogLabel">VALIZO FOUNDATION</span>
+
+    <h1>Stories, Advocacy & Community Impact</h1>
+
+    <p>
+      Follow our latest articles, advocacy campaigns, project updates,
+      community stories and opportunities creating change across Uganda.
+    </p>
+  </div>
+</section>
+<section class="featuredBlog">
+  <div class="container featuredGrid">
+
+    <div class="featuredImage">
+      <img src="assets/children12.jpg" alt="School feeding and child nutrition">
+    </div>
+
+    <div class="featuredContent">
+      <span class="category">Policy Analysis • 2026</span>
+
+      <h2>A Legal Analysis of Uganda's Draft National School Feeding Policy</h2>
+
+      <p>
+        Examining the role of law, adequate nutrition, child welfare and Uganda's
+        responsibility to protect school-going children from hunger and malnutrition.
+      </p>
+
+      <a href="school-feeding-policy.html" class="readMore">Read Full Article</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="blogSection">
+  <div class="container">
+
+    <div class="blogGrid">
+
+      <article class="blogCard">
+        <img src="assets/children13.jpg" alt="">
+        <div class="blogBody">
+          <span>Care and Protection</span>
+          <h3>Child Protection in Uganda: Progress and Remaining Challenges</h3>
+          <p>Understanding the gaps that still affect vulnerable children and families.</p>
+        </div>
+      </article>
+
+      <article class="blogCard">
+        <img src="assets/children14.jpg" alt="">
+        <div class="blogBody">
+          <span>Health</span>
+          <h3>Ending HIV Among Children in Uganda</h3>
+          <p>Why prevention, early diagnosis and community health outreach matter.</p>
+        </div>
+      </article>
+
+      <article class="blogCard">
+        <img src="assets/children15.jpg" alt="">
+        <div class="blogBody">
+          <span>Nutrition</span>
+          <h3>Why Nutrition Matters for Every Child's Future</h3>
+          <p>How good nutrition supports learning, growth and long-term wellbeing.</p>
+        </div>
+      </article>
+
+      <article class="blogCard">
+        <img src="assets/children16.jpg" alt="">
+        <div class="blogBody">
+          <span>Participation</span>
+          <h3>Why Community Participation Matters in Child Protection</h3>
+          <p>Building safer communities through awareness, reporting and shared responsibility.</p>
+        </div>
+      </article>
+
+      <article class="blogCard">
+        <img src="assets/children17.jpg" alt="">
+        <div class="blogBody">
+          <span>Health and Wellbeing</span>
+          <h3>The Future of Community Healthcare in Uganda</h3>
+          <p>Strengthening access to health information, care and local support systems.</p>
+        </div>
+      </article>
+
+      <article class="blogCard">
+        <img src="assets/children18.jpg" alt="">
+        <div class="blogBody">
+          <span>Advocacy</span>
+          <h3>Ending Child Malnutrition Through Better Policies</h3>
+          <p>How policy reform can protect children from hunger and hidden malnutrition.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+ <!-- Donation Popup -->
+<div class="donationModal" id="donationModal">
+  <div class="donationOverlay"></div>
+
+  <div class="donationPopup">
+    <button class="closeDonation" id="closeDonation">&times;</button>
+
+    <div class="donationSlider" id="donationSlider">
+
+      <section class="donationStep">
+        <span class="donateLabel">Step 1 of 3</span>
+        <h2>Donation From</h2>
+        <p>Tell us who is making this donation.</p>
+
+        <label>Name</label>
+        <input type="text" id="donorName" placeholder="Enter your full name">
+
+        <label>Cause</label>
+        <select id="donationCause">
+          <option>Pay School Fees</option>
+          <option>Medical Support</option>
+          <option>Food Support</option>
+          <option>Advocacy Campaigns</option>
+          <option>Greatest Need</option>
+        </select>
+
+        <label>Amount</label>
+        <input type="number" id="donationAmount" placeholder="Enter amount in UGX">
+
+        <button class="modalNext" type="button" id="goToPayment">
+          Continue
+        </button>
+      </section>
+
+      <section class="donationStep">
+        <span class="donateLabel">Step 2 of 3</span>
+        <h2>Select Payment Mode</h2>
+        <p>Choose how you would like to complete your donation.</p>
+
+        <div class="paymentChoiceGrid">
+          <button class="paymentChoice mtn" type="button" data-method="mtn">
+            <span>MTN</span>
+            <small>Mobile Money</small>
+          </button>
+
+          <button class="paymentChoice airtel" type="button" data-method="airtel">
+            <span>Airtel</span>
+            <small>Money</small>
+          </button>
+
+          <button class="paymentChoice visa" type="button" data-method="visa">
+            <span>VISA</span>
+            <small>Card Payment</small>
+          </button>
+        </div>
+
+        <button class="modalBack" type="button" id="backToDetails">
+          Back
+        </button>
+      </section>
+
+      <section class="donationStep">
+        <span class="donateLabel">Step 3 of 3</span>
+        <h2 id="paymentTitle">Payment Details</h2>
+        <p id="paymentDescription">
+          Enter your payment details to continue.
+        </p>
+
+        <div class="selectedPaymentBadge" id="selectedPaymentBadge">
+          MTN Mobile Money
+        </div>
+
+        <div class="mobileMoneyFields" id="mobileMoneyFields">
+          <label id="phoneLabel">MTN Number</label>
+          <input type="tel" id="mobileNumber" placeholder="Example: 256701777769">
+
+          <p class="paymentNote">
+            You will receive a prompt on your phone to enter your PIN.
+          </p>
+        </div>
+
+        <div class="visaFields" id="visaFields">
+          <label>Cardholder Name</label>
+          <input type="text" placeholder="Name on card">
+
+          <label>Card Number</label>
+          <input type="text" placeholder="0000 0000 0000 0000">
+
+          <div class="cardRow">
+            <div>
+              <label>Expiry Date</label>
+              <input type="text" placeholder="MM/YY">
+            </div>
+
+            <div>
+              <label>CVV</label>
+              <input type="password" placeholder="123">
+            </div>
+          </div>
+        </div>
+
+        <div class="stepActions">
+          <button class="modalBack" type="button" id="backToMethods">
+            Back
+          </button>
+
+          <button class="submitDonation" type="button">
+            Complete Donation
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<!-- Donation Popup End -->
+
+<footer class="siteFooter">
+    <div class="footerContent">
+      <div class="footerLogo">
+        <img src="assets/valizo_logo.png" alt="Valizo Foundation logo">
+        <span>Valizo Foundation</span>
+      </div>
+
+      <div class="socialLinks">
+        <a href="https://x.com/ValizoFoundati_" target="_blank" aria-label="Valizo Foundation on X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://instagram.com/valizofoundation" target="_blank" aria-label="Valizo Foundation on Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@valizofoundation" target="_blank" aria-label="Valizo Foundation on YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://wa.me/2567017777769" target="_blank" aria-label="Valizo Foundation on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Valizo Foundation. All rights reserved.
+      </p>
+    </div>
+
+
+  </footer>
+</body>
+</html>
