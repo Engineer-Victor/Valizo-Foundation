@@ -117,3 +117,130 @@ if (donationModal) {
       });
     });
   }
+
+
+  /* ================================
+   PROJECT PHOTO ALBUM LIGHTBOX
+================================ */
+
+const albumImages = document.querySelectorAll(".albumItem img");
+const lightbox = document.getElementById("photoLightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+
+const lightboxClose = document.getElementById("lightboxClose");
+const lightboxPrev = document.getElementById("lightboxPrev");
+const lightboxNext = document.getElementById("lightboxNext");
+
+let currentPhoto = 0;
+
+
+/* Open photo */
+
+function openPhoto(index) {
+
+  currentPhoto = index;
+
+  const image = albumImages[currentPhoto];
+
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
+
+  lightboxCaption.textContent = `Photo ${currentPhoto + 1} of ${albumImages.length}`;
+
+  lightbox.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+/* Close photo */
+
+function closePhoto() {
+
+  lightbox.classList.remove("active");
+
+  document.body.style.overflow = "";
+}
+
+
+/* Next photo */
+
+function nextPhoto() {
+
+  currentPhoto++;
+
+  if (currentPhoto >= albumImages.length) {
+    currentPhoto = 0;
+  }
+
+  openPhoto(currentPhoto);
+}
+
+
+/* Previous photo */
+
+function previousPhoto() {
+
+  currentPhoto--;
+
+  if (currentPhoto < 0) {
+    currentPhoto = albumImages.length - 1;
+  }
+
+  openPhoto(currentPhoto);
+}
+
+
+/* Click images */
+
+albumImages.forEach((image, index) => {
+
+  image.parentElement.addEventListener("click", () => {
+    openPhoto(index);
+  });
+
+});
+
+
+/* Buttons */
+
+lightboxClose.addEventListener("click", closePhoto);
+
+lightboxNext.addEventListener("click", nextPhoto);
+
+lightboxPrev.addEventListener("click", previousPhoto);
+
+
+/* Click outside image */
+
+lightbox.addEventListener("click", (event) => {
+
+  if (event.target === lightbox) {
+    closePhoto();
+  }
+
+});
+
+
+/* Keyboard controls */
+
+document.addEventListener("keydown", (event) => {
+
+  if (!lightbox.classList.contains("active")) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    closePhoto();
+  }
+
+  if (event.key === "ArrowRight") {
+    nextPhoto();
+  }
+
+  if (event.key === "ArrowLeft") {
+    previousPhoto();
+  }
+
+});

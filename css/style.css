@@ -1507,3 +1507,231 @@
     text-align:center;
     margin-top:55px;
 }
+
+/* ================================
+   PROJECT PHOTO ALBUM
+================================ */
+
+.projectAlbum {
+  margin-top: 70px;
+  width: 100%;
+  max-width: none;
+  display: block;
+}
+
+.albumHeader {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.albumHeader .label {
+  margin-bottom: 8px;
+}
+
+.albumHeader h3 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #17251d;
+}
+
+.albumHeader p {
+  margin: 0;
+  color: #66736b;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* PHOTO GRID */
+
+.albumGrid {
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+
+/* INDIVIDUAL PHOTO */
+
+.albumItem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+.albumItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.albumItem:hover img {
+  transform: scale(1.06);
+}
+
+/* ================================
+   PHOTO LIGHTBOX
+================================ */
+
+.photoLightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 30px;
+}
+
+.photoLightbox.active {
+  display: flex;
+}
+
+.lightboxContent {
+  max-width: 1100px;
+  max-height: 90vh;
+  text-align: center;
+  position: relative;
+}
+
+.lightboxContent img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+}
+
+.lightboxContent p {
+  color: #ffffff;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.lightboxClose,
+.lightboxPrev,
+.lightboxNext {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+.lightboxClose:hover,
+.lightboxPrev:hover,
+.lightboxNext:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lightboxClose {
+  top: 25px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+}
+
+.lightboxPrev,
+.lightboxNext {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  font-size: 25px;
+}
+
+.lightboxPrev {
+  left: 25px;
+}
+
+.lightboxNext {
+  right: 25px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .albumGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .projectAlbum {
+    margin-top: 50px;
+  }
+
+  .albumHeader h3 {
+    font-size: 26px;
+  }
+
+  .albumGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .albumItem {
+    border-radius: 10px;
+  }
+
+  .photoLightbox {
+    padding: 15px;
+  }
+
+  .lightboxPrev,
+  .lightboxNext {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .lightboxPrev {
+    left: 10px;
+  }
+
+  .lightboxNext {
+    right: 10px;
+  }
+
+}
+
+.projectAlbum {
+  width: 100% !important;
+  max-width: none !important;
+  display: block !important;
+}
+
+.albumGrid {
+  width: 100% !important;
+  max-width: none !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
