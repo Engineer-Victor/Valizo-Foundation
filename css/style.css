@@ -1735,3 +1735,262 @@
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   gap: 20px !important;
 }
+
+
+/* =========================================
+   VALIZO FOUNDATION NEWSLETTER DESIGN
+========================================= */
+
+.footerNewsletter {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1120px;
+  margin: 0 auto 48px;
+  padding: 58px 28px 42px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #ffffff;
+
+  background: rgba(25, 77, 52, 0);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.newsletterContent {
+  position: relative;
+  z-index: 2;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.newsletterEyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #d7f0df;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.footerNewsletter h2 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.newsletterDescription {
+  max-width: 550px;
+  margin: 0 auto 28px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Email form */
+
+.newsletterForm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 6px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.newsletterForm input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+  border-radius: 100px;
+
+  background: transparent;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.newsletterForm input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.newsletterForm input[type="email"]:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: -3px;
+}
+
+/* White Subscribe button */
+
+.newsletterForm button {
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 0 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+
+  background: #ffffff;
+  color: #194d34;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: background 0.25s ease,
+              color 0.25s ease,
+              transform 0.25s ease;
+}
+
+.newsletterForm button:hover {
+  background: #eaf4ed;
+  color: #123c2b;
+  transform: translateY(-2px);
+}
+
+.newsletterForm button:focus-visible {
+  outline: 3px solid #d7f0df;
+  outline-offset: 3px;
+}
+
+.newsletterForm button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+/* Privacy and feedback */
+
+.newsletterPrivacy {
+  max-width: 480px;
+  margin: 20px auto 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.newsletterMessage {
+  margin: 12px 0 0;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Decorative transparent rings */
+
+.newsletterDecor {
+  position: absolute;
+  z-index: 1;
+  width: 230px;
+  height: 230px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 44% 56% 60% 40%;
+  pointer-events: none;
+}
+
+.newsletterDecorOne {
+  top: -145px;
+  left: -95px;
+  transform: rotate(25deg);
+
+  box-shadow:
+    0 0 0 10px rgba(255, 255, 255, 0.025),
+    0 0 0 22px rgba(255, 255, 255, 0.02),
+    0 0 0 34px rgba(255, 255, 255, 0.015);
+}
+
+.newsletterDecorTwo {
+  right: -135px;
+  bottom: -165px;
+  transform: rotate(-20deg);
+
+  box-shadow:
+    0 0 0 10px rgba(255, 255, 255, 0.025),
+    0 0 0 22px rgba(255, 255, 255, 0.02),
+    0 0 0 34px rgba(255, 255, 255, 0.015);
+}
+
+/* Accessible hidden label */
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mobile responsive layout */
+
+@media (max-width: 600px) {
+  .footerNewsletter {
+    margin-bottom: 34px;
+    padding: 40px 18px 30px;
+    border-radius: 22px;
+  }
+
+  .footerNewsletter h2 {
+    font-size: 31px;
+    letter-spacing: -0.5px;
+  }
+
+  .newsletterDescription {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 18px;
+  }
+
+  .newsletterForm input[type="email"] {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    text-align: left;
+  }
+
+  .newsletterForm button {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .newsletterDecor {
+    width: 150px;
+    height: 150px;
+  }
+}

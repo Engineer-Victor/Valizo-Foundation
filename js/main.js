@@ -244,3 +244,61 @@ document.addEventListener("keydown", (event) => {
   }
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("footerNewsletterForm");
+
+  if (!form) return;
+
+  const emailInput = document.getElementById("footerNewsletterEmail");
+  const button = document.getElementById("newsletterSubmit");
+  const message = document.getElementById("newsletterMessage");
+
+  const SCRIPT_URL = 
+    "https://script.google.com/macros/s/AKfycbw5gep45NI_0YGzt_1XjxuEBAGqkhuuXPZgVgp6rKWEY1Np9C-vdOzoQVUhDrCSKBUi/exec";
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (!emailInput.checkValidity()) {
+      emailInput.reportValidity();
+      return;
+    }
+
+    if (!SCRIPT_URL.startsWith("https://script.google.com/macros/s/AKfycbw5gep45NI_0YGzt_1XjxuEBAGqkhuuXPZgVgp6rKWEY1Np9C-vdOzoQVUhDrCSKBUi/exec")) {
+      message.textContent = "Newsletter signup is not configured yet.";
+      return;
+    }
+
+    button.disabled = true;
+    button.textContent = "Submitting...";
+    message.textContent = "";
+
+    const data = new URLSearchParams({
+      email: emailInput.value.trim().toLowerCase(),
+      device: navigator.userAgent
+    });
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: data
+      });
+
+      message.textContent =
+        "Your request was sent. Please allow time for processing.";
+
+      emailInput.value = "";
+
+    } catch (error) {
+      message.textContent =
+        "Unable to submit your request. Please try again.";
+    } finally {
+      button.disabled = false;
+      button.innerHTML =
+        'Subscribe <span aria-hidden="true">→</span>';
+    }
+  });
+});

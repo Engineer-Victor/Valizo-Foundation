@@ -945,78 +945,114 @@
 
   <!-- FOOTER -->
 
-  <footer class="siteFooter">
+<footer class="siteFooter">
 
-    <div class="footerContent">
+  <!-- Newsletter Signup -->
+  <section class="footerNewsletter">
+    <div class="newsletterDecor newsletterDecorOne"></div>
+    <div class="newsletterDecor newsletterDecorTwo"></div>
 
+    <div class="newsletterContent">
+      <span class="newsletterEyebrow">STAY CONNECTED WITH VALIZO</span>
 
-      <div class="footerLogo">
+      <h2>Be Part of the Change</h2>
 
-        <img
-          src="assets/valizo_logo.png"
-          alt="Valizo Foundation logo"
-        >
-
-        <span>
-          Valizo Foundation
-        </span>
-
-      </div>
-
-
-      <div class="socialLinks">
-
-        <a
-          href="https://x.com/ValizoFoundati_"
-          target="_blank"
-          aria-label="Valizo Foundation on X"
-        >
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-
-
-        <a
-          href="https://instagram.com/valizofoundation"
-          target="_blank"
-          aria-label="Valizo Foundation on Instagram"
-        >
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-
-        <a
-          href="https://youtube.com/@valizofoundation"
-          target="_blank"
-          aria-label="Valizo Foundation on YouTube"
-        >
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-
-
-        <a
-          href="https://wa.me/2567017777769"
-          target="_blank"
-          aria-label="Valizo Foundation on WhatsApp"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-      </div>
-
-
-      <p class="copyright">
-
-        ©
-
-        <span id="year"></span>
-
-        Valizo Foundation. All rights reserved.
-
+      <p class="newsletterDescription">
+        Get our monthly newsletter featuring stories of hope,
+        community projects, and the impact we are creating together.
       </p>
 
+      <form class="newsletterForm" id="footerNewsletterForm">
+        <label class="visuallyHidden" for="footerNewsletterEmail">
+          Your email address
+        </label>
+
+        <input
+          type="email"
+          id="footerNewsletterEmail"
+          name="email"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        >
+
+        <button type="submit" id="newsletterSubmit">
+          Subscribe <span aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <p class="newsletterPrivacy">
+        Your privacy matters. Receive meaningful updates from Valizo.
+        Unsubscribe at any time.
+      </p>
+
+      <p
+        class="newsletterMessage"
+        id="newsletterMessage"
+        role="status"
+        aria-live="polite"
+      ></p>
+    </div>
+  </section>
+
+  <!-- Existing Footer Content -->
+  <div class="footerContent">
+
+    <div class="footerLogo">
+      <img
+        src="assets/valizo_logo.png"
+        alt="Valizo Foundation logo"
+      >
+      <span>Valizo Foundation</span>
     </div>
 
-  </footer>
+    <div class="socialLinks">
+      <a
+        href="https://x.com/ValizoFoundati_"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Valizo Foundation on X"
+      >
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+
+      <a
+        href="https://instagram.com/valizofoundation"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Valizo Foundation on Instagram"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://youtube.com/@valizofoundation"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Valizo Foundation on YouTube"
+      >
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a
+        href="https://wa.me/2567017777769"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Valizo Foundation on WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span>
+      Valizo Foundation. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
 
 
   <script src="js/main.js"></script>
